@@ -5,6 +5,10 @@ using UnityEngine;
 public class playerBehaviour : MonoBehaviour
 {
     Rigidbody2D body;
+    public Animator anim;
+
+    Vector2 movement;
+    public float moveSpeed = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,14 +18,16 @@ public class playerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
 
+        anim.SetFloat("Horizontal", movement.x);
+        anim.SetFloat("Vertical", movement.y);
+        anim.SetFloat("Speed", movement.sqrMagnitude);
     }
 
     private void FixedUpdate()
     {
-        var dir = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-
-        body.velocity = dir * 3;
-        //transform.Translate(dir * 3 * Time.deltaTime);
+        body.MovePosition(body.position + movement * moveSpeed * Time.deltaTime);
     }
 }
