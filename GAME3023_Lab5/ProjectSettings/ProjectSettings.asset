@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 484b5a68b8ba4174c851cca9a9226b46
+  productGUID: cefcc85a8ac61a446b47227881710286
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: GAME3023_Labs_HEYINK
+  productName: GAME3023_Lab5
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -717,14 +717,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: GAME3023_Labs_HEYINK
+  metroPackageName: GAME3023_Lab5
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: GAME3023_Labs_HEYINK
+  metroApplicationDescription: GAME3023_Lab5
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -792,10 +792,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 66b9b547-66b6-4d63-993b-1247f74bd375
+  cloudProjectId: 4aa414e8-daca-4241-ab80-b78a70d1b0d9
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: GAME3023_Labs_HEYINK
+  projectName: GAME3023_Lab5 (1)
   organizationId: musicmaniac74
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
