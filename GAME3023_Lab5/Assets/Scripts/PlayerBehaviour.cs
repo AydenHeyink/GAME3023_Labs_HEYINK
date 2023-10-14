@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TreeEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerBehaviour : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class PlayerBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -30,7 +30,16 @@ public class PlayerBehaviour : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * MoveSpeed * Time.fixedDeltaTime);
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Time.timeScale = 0;
+            Destroy(collision);
+            SceneManager.LoadScene("EncounterScene", LoadSceneMode.Additive);
+        }
     }
 }
     
