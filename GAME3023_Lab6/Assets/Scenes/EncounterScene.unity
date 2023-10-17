@@ -313,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ability2
+  m_text: 'Health Increase
 
 '
   m_isRightToLeft: 0
@@ -1834,7 +1834,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ability1
+  m_text: 'Steal
 
 '
   m_isRightToLeft: 0
@@ -2153,7 +2153,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ability3
+  m_text: 'Knock Out
 
 '
   m_isRightToLeft: 0
