@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -40,35 +41,23 @@ public class EncounterManager : MonoBehaviour
         moves.Add(but7);
     }
 
-    TextMeshProUGUI t;
     void Start()
     {
         playerTurn = true;
 
-        foreach(string s in names)
-        {
-            for(int i = 0; i < names.Count; i++)
-            {
-                //moves[i].GetComponentInChildren<Text>().text= s;
-            }
-        }
-
-
-        //but1.gameObject.SetActive(false);
         SceneManager.SetActiveScene(SceneManager.GetActiveScene());
     }
 
     // Update is called once per frame
     void Update()
     {
-
-       
     }
 
+    // ISSUES---
     static public void EndEncounter()
     {
         Time.timeScale = 1;
-        SceneManager.UnloadSceneAsync(2);
+        SceneManager.UnloadSceneAsync("EncounterScene");
     }
 
     static public void Begin(int var)

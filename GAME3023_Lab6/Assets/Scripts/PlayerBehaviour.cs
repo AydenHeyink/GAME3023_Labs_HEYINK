@@ -42,6 +42,10 @@ public class PlayerBehaviour : MonoBehaviour
         {
             Debug.Log("Player Dies!");
         }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            EncounterManager.EndEncounter();
+        }
     }
 
     private void FixedUpdate()
@@ -57,6 +61,7 @@ public class PlayerBehaviour : MonoBehaviour
             Destroy(collision);
             SceneManager.LoadScene("EncounterScene", LoadSceneMode.Additive);
         }
+
     }
 
     static public void DamagePlayer(float damage)

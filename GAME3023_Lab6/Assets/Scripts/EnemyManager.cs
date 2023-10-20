@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class EnemyManager : MonoBehaviour
 {
     [SerializeField] Image enemyHealthBar;
+    [SerializeField] GameObject enemyCanvas;
 
     [SerializeField] static float enemyHealth;
     const int maxHealth = 100;
@@ -29,6 +30,8 @@ public class EnemyManager : MonoBehaviour
             Debug.Log("You Win!!");
             EncounterManager.EndEncounter();
         }
+
+        
     }
 
     static public void EnemyTurn()
@@ -87,5 +90,14 @@ public class EnemyManager : MonoBehaviour
     static public void HealEnemy(float healing)
     {
         enemyHealth += healing;
+    }
+
+    public void ActivateCanvas()
+    {
+        enemyCanvas.SetActive(true);
+    }
+    public void DeactivateCanvas() 
+    { 
+        enemyCanvas.SetActive(false);
     }
 }
