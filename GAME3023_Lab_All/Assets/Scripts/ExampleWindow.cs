@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using Unity.VisualScripting;
 
 public class ExampleWindow : EditorWindow
 {
+
     string nameString_A = "placeholder";
     int damageInt_A = 0;
     int staminaInt_A = 0;
@@ -32,9 +34,7 @@ public class ExampleWindow : EditorWindow
 
         if (GUILayout.Button("Craft New Ability"))
         {
-            Debug.Log(nameString_A);
-            Debug.Log(damageInt_A);
-            Debug.Log(staminaInt_A);
+            EncounterManager.AddNewAbility(nameString_A, damageInt_A, staminaInt_A);
         }
 
 
@@ -48,9 +48,7 @@ public class ExampleWindow : EditorWindow
 
         if (GUILayout.Button("Craft New Weapon"))
         {
-            Debug.Log(nameString_A);
-            Debug.Log(damageInt_W);
-            Debug.Log(staminaInt_W);
+            EncounterManager.AddNewAbility(nameString_A, damageInt_A, staminaInt_A);
         }
     }
 }

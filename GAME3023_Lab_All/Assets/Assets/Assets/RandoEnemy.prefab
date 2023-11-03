@@ -224,6 +224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7329101325008843035, guid: 0d59149e1b2d7f94383404a7a20125d8, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8615256000995466383, guid: 0d59149e1b2d7f94383404a7a20125d8, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.33333334

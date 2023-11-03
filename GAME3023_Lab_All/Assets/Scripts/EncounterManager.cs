@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,39 +7,64 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+[Serializable]
+public class Item
+{
+    private string name;
+    private int damage;
+    private int stamina;
+
+    public Item(string name, int dam, int stam)
+    {
+        this.name = name;
+        this.damage= dam;
+        this.stamina= stam;
+    }
+
+    public string GetName()
+    {
+        return name;
+    }
+
+    public int GetDamage()
+    {
+        return damage;
+    }
+
+    public int GetStamina() 
+    {
+        return stamina;
+    }
+
+    public int Use()
+    {
+        return damage;
+    }
+}
+
+
+
 public class EncounterManager : MonoBehaviour
 {
-    List<Button> moves = new List<Button>();
-    List<string> names = new List<string>();
+    [SerializeField] Canvas buttonCanvas;
+    [SerializeField] GameObject butPref;
+
+    static List<Item> myitem = new List<Item>();
 
     static bool playerTurn;
-
-    [SerializeField] Button but1;
-    [SerializeField] Button but2;
-    [SerializeField] Button but3;
-    [SerializeField] Button but4;
-    [SerializeField] Button but5;
-    [SerializeField] Button but6;
-    [SerializeField] Button but7;
 
     // Start is called before the first frame update
     private void Awake()
     {
-        names.Add("Sword");
-        names.Add("Dagger");
-        names.Add("Fists");
-        names.Add("Throwing Knives");
-        names.Add("Ability1");
-        names.Add("Ability3");
-        names.Add("Ability2");
+        AddNewAbility("Sword", 50, 10);
+        AddNewAbility("Dagger", 30, 5);
+        AddNewAbility("Fists", 10, 3);
+        AddNewAbility("Throwing Knives", 10, 2);
+    }
 
-        moves.Add(but1);
-        moves.Add(but2);
-        moves.Add(but3);
-        moves.Add(but4);
-        moves.Add(but5);
-        moves.Add(but6);
-        moves.Add(but7);
+    public Canvas GetCanvas()
+    {
+        return buttonCanvas;
     }
 
     void Start()
@@ -46,6 +72,19 @@ public class EncounterManager : MonoBehaviour
         playerTurn = true;
 
         SceneManager.SetActiveScene(SceneManager.GetActiveScene());
+
+        foreach (Item it in myitem) 
+        {
+            GameObject button = Instantiate(butPref) as GameObject;
+            button.transform.SetParent(GetCanvas().transform, false);
+            button.gameObject.GetComponentInChildren<Text>().text = it.GetName();
+            gameObject.SetActive(true);
+        }
+    }
+
+    static public void AddNewAbility(string name, int dam, int stam)
+    {
+        myitem.Add(new Item(name, dam, stam));
     }
 
     // Update is called once per frame

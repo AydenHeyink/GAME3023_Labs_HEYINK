@@ -12,12 +12,10 @@ public class RandomInteger : Editor
 
         PlayerEditorScript PES = (PlayerEditorScript)target;
 
-        if (GUILayout.Button("Add new Ability"))
+        if (GUILayout.Button("Add New:"))
         {
+            ExampleWindow win = (ExampleWindow)EditorWindow.GetWindow(typeof(ExampleWindow), false, "ADD");
+            win.Show();
         }
-
-        if (GUILayout.Button("Add new weapon"))
-        {
-        }    
     }
 }
