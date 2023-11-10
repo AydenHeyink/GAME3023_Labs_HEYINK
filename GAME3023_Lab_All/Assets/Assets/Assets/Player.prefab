@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 2539009091312969500}
   - component: {fileID: 4966216432312163175}
   - component: {fileID: 3795281445787473747}
-  - component: {fileID: 9035618289166808554}
+  - component: {fileID: 352859898898256782}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -292,6 +292,8 @@ MonoBehaviour:
   rb: {fileID: 4966216432312163175}
   healthBar: {fileID: 2879087396612870004}
   anim: {fileID: 3795281445787473747}
+  buttonCanvas: {fileID: 6730392467750923927}
+  butPref: {fileID: 3199057203908701970, guid: cb320fa34999e664687e1c17a2206d38, type: 3}
 --- !u!58 &2539009091312969500
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -375,7 +377,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &9035618289166808554
+--- !u!114 &352859898898256782
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -384,7 +386,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2962958163320608354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a16b54ec91aaa554284d720fdcf605a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 4c4845d16ea2f984690e016adb332384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3257394094312491227

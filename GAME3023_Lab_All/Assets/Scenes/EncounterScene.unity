@@ -277,8 +277,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179accc3b765e074ab98786a34bfdb0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonCanvas: {fileID: 2066502127}
-  butPref: {fileID: 3199057203908701970, guid: cb320fa34999e664687e1c17a2206d38, type: 3}
 --- !u!4 &1304051532
 Transform:
   m_ObjectHideFlags: 0
