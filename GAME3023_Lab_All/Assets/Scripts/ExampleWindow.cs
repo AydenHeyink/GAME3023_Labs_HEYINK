@@ -6,16 +6,11 @@ using Unity.VisualScripting;
 
 public class ExampleWindow : EditorWindow
 {
-
-    string nameString_A = "placeholder";
-    int damageInt_A = 0;
-    int staminaInt_A = 0;
-
     string nameString_W = "placeholder";
     int damageInt_W = 0;
     int staminaInt_W = 0;
 
-    [MenuItem("Window/Add New Ability OR Weapon")]
+    [MenuItem("Window/Add New Weapon")]
     public static void ShowWindow()
     {
         GetWindow<ExampleWindow>("Add");
@@ -23,21 +18,6 @@ public class ExampleWindow : EditorWindow
 
     void OnGUI()
     {
-
-        // Block to add new ability
-        GUILayout.Label("Ability:", EditorStyles.boldLabel);
-
-        nameString_A = EditorGUILayout.TextField("Name", nameString_A);
-
-        damageInt_A = EditorGUILayout.IntField("Damage", damageInt_A);
-        staminaInt_A = EditorGUILayout.IntField("Stamina", staminaInt_A);
-
-        if (GUILayout.Button("Craft New Ability"))
-        {
-            EncounterManager.AddNewAbility(nameString_A, damageInt_A, staminaInt_A);
-        }
-
-
         // Block to add new weapon
         GUILayout.Label("Weapon:", EditorStyles.boldLabel);
 
@@ -48,7 +28,7 @@ public class ExampleWindow : EditorWindow
 
         if (GUILayout.Button("Craft New Weapon"))
         {
-            EncounterManager.AddNewAbility(nameString_A, damageInt_A, staminaInt_A);
+            PlayerBehaviour.AddNew(nameString_W, damageInt_W, staminaInt_W);
         }
     }
 }
