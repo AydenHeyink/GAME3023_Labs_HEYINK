@@ -194,14 +194,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4572372809814117855}
   - component: {fileID: 591595672890962115}
-  - component: {fileID: 5809009260096818716}
-  - component: {fileID: 2539009091312969500}
-  - component: {fileID: 4966216432312163175}
-  - component: {fileID: 3795281445787473747}
   - component: {fileID: 352859898898256782}
+  - component: {fileID: 7820211560050131581}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
+  m_Name: EncounterPlayer
+  m_TagString: EncounterPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,105 +273,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5809009260096818716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2962958163320608354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6597bc6fa6c8f6e41a4e04c619c9d820, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeed: 3
-  rb: {fileID: 4966216432312163175}
-  healthBar: {fileID: 2879087396612870004}
-  anim: {fileID: 3795281445787473747}
---- !u!58 &2539009091312969500
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2962958163320608354}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.09
---- !u!50 &4966216432312163175
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2962958163320608354}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 4
---- !u!95 &3795281445787473747
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2962958163320608354}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b5bfd69e3eeb5d64c91ee14b3d90133e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &352859898898256782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +285,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c4845d16ea2f984690e016adb332384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7820211560050131581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2962958163320608354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d405dea9485a55d4ca187b40d2ce42f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 2879087396612870004}
+  buttonCanvas: {fileID: 0}
+  butPref: {fileID: 3199057203908701970, guid: cb320fa34999e664687e1c17a2206d38, type: 3}
 --- !u!1 &3257394094312491227
 GameObject:
   m_ObjectHideFlags: 0

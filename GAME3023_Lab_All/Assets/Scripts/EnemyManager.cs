@@ -43,28 +43,28 @@ public class EnemyManager : MonoBehaviour
         {
             case 1:
                 Debug.Log("Enemy uses Sword!");
-                PlayerBehaviour.DamagePlayer(45);
+                PlayerBehEncounter.DamagePlayer(45);
                 EncounterManager.Turn();
                 break;
             case 2:
                 Debug.Log("Enemy uses Dagger!");
-                PlayerBehaviour.DamagePlayer(20);
+                PlayerBehEncounter.DamagePlayer(20);
                 EncounterManager.Turn();
                 break;
             case 3:
                 Debug.Log("Enemy uses Fists!");
-                PlayerBehaviour.DamagePlayer(5);
+                PlayerBehEncounter.DamagePlayer(5);
                 EncounterManager.Turn();
                 break;
             case 4:
                 Debug.Log("Enemy uses Throwing Knives!");
-                PlayerBehaviour.DamagePlayer(15);
+                PlayerBehEncounter.DamagePlayer(15);
                 EncounterManager.Turn();
                 break;
             case 5:
                 Debug.Log("Enemy uses Steal Ability!");
                 EnemyManager.HealEnemy(30);
-                PlayerBehaviour.DamagePlayer(15);
+                PlayerBehEncounter.DamagePlayer(15);
                 EncounterManager.Turn();
                 break;
             case 6:

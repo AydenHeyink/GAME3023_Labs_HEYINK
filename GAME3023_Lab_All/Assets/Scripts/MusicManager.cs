@@ -10,17 +10,17 @@ public class MusicManager : MonoBehaviour
     [SerializeField] AudioClip menuMusic;
     [SerializeField] AudioClip gameMusic;
     [SerializeField] AudioClip encounterMusic;
-
+    string scene;
 
     // Start is called before the first frame update
     void Start()
     {
-        string scene = SceneManager.GetActiveScene().name;
-
+        scene = SceneManager.GetActiveScene().name;
 
         switch (scene) 
         {
             case "SampleScene":
+            
                 source.clip= gameMusic; 
                 source.Play();
                 break;
@@ -38,6 +38,6 @@ public class MusicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
